@@ -4,11 +4,11 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/gal/Documents/NetBeansProjects/JavaApplication1/src/javaapplication1/JavaApplication1.java</file>
-            <file>file:/C:/Users/gal/Documents/NetBeansProjects/JavaApplication1/src/javaapplication/Document.java</file>
+            <file>file:/C:/Users/gal/Documents/NetBeansProjects/JavaApplication1/src/javaapplication/stopwords.txt</file>
             <file>file:/C:/Users/gal/Documents/NetBeansProjects/JavaApplication1/src/javaapplication/InvertedIndex.java</file>
             <file>file:/C:/Users/gal/Documents/NetBeansProjects/JavaApplication1/src/javaapplication/Passage.java</file>
             <file>file:/C:/Users/gal/Documents/NetBeansProjects/JavaApplication1/src/javaapplication/StringTokonizer.java</file>
-            <file>file:/C:/Users/gal/Documents/NetBeansProjects/JavaApplication1/src/javaapplication/Tuple.java</file>
+            <file>file:/C:/Users/gal/Documents/NetBeansProjects/JavaApplication1/src/javaapplication/StopwordsListCreator.java</file>
             <file>file:/C:/Users/gal/Documents/NetBeansProjects/JavaApplication1/src/javaapplication/Retrival.java</file>
             <file>file:/C:/Users/gal/Documents/NetBeansProjects/JavaApplication1/src/javaapplication/QueryParser.java</file>
         </group>
