@@ -49,7 +49,7 @@ public class JavaApplication1 {
                    NumberOfPassages =  (Integer)((JSONObject)((JSONObject)obj).get(Integer.toString(i))).size(); 
                    for(int j=0; j < NumberOfPassages; j++){
                        passage = (String) ((JSONObject)((JSONObject)obj).get(Integer.toString(i))).get(Integer.toString(j)); 
-                       passage = passage.toLowerCase(); 
+                       passage = passage.toLowerCase();
                        Passage mypassage = new Passage(j, i, passage); 
                              st1 = new StringTokonizer(passage);
                              PassageTokens = st1.getWords();
@@ -86,10 +86,9 @@ public class JavaApplication1 {
 
     
               }
-              if( InvertedIndex.doesContain1())
-                  System.out.println("okay , doc_id1 exists not only 0 "); 
-              else 
-                    System.out.println("doc_id 1 does not exist , problem!!!! "); 
+             
+             
+          
               Retrival.InitializeRetriever(); 
               QueryParser.Parse(); 
               Retrival.printToJson(); 

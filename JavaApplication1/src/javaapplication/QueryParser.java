@@ -21,7 +21,7 @@ public class QueryParser {
     {         
         Queries = new LinkedList<Tuple<Integer, String>>(); 
             BufferedReader TSVFile = 
-    new BufferedReader(new FileReader("C:\\Users\\gal\\Documents\\NetBeansProjects\\JavaApplication1\\src\\javaapplication\\dev.tsv"));
+    new BufferedReader(new FileReader("C:\\Users\\gal\\Documents\\NetBeansProjects\\JavaApplication1\\src\\javaapplication\\test-sample.tsv"));
 
 
 

@@ -54,15 +54,22 @@ public class Retrival {
     public static void parseQuery( List<String> terms, int Question_id) throws IOException 
     {//query comes from tsv json
         //printDocIdsForQuery(terms,Question_id); 
+       // boolean misspelling = false; 
         current_query_id =  Question_id; 
         
          passages.clear();
          for(int currentQueryWord = 0;  currentQueryWord < terms.size() ;  currentQueryWord++ )
          {
              String term = terms.get(currentQueryWord); //
-             
-             if(InvertedIndex.doesWordExist(term))
+           /*  if(InvertedIndex.not_appear_but_very_similar(term))
              {
+                 String misspeleed = term; 
+                 String fixed = InvertedIndex.getClosestWord(misspeleed); 
+                 misspelling=true; 
+             }*/
+             if(InvertedIndex.doesWordExist(term) /* || misspelling*/)
+             {
+                 //We gave up on Misspelling idea cause it's too much complexity for each term going through all the corpus!!
                     double total_term_frequency = InvertedIndex.get_total_term_frequency(term);
                  //Not doing anything 
                 
@@ -113,7 +120,7 @@ public class Retrival {
              JSONObject  passDetails =  new JSONObject();
              int pass_id = RelevantPassage.x.get_passage_id();
              int doc_id = RelevantPassage.x.get_doc_id(); 
-             passDetails.put("score: ", String.format("%.7f", RelevantPassage.y)); 
+             passDetails.put("score: ", String.format("%.7f", 10000*RelevantPassage.y)); 
              passDetails.put("answer: ", Integer.toString(doc_id) + ":" + Integer.toString(pass_id));
              answers.add(passDetails); 
          }
@@ -140,6 +147,7 @@ public class Retrival {
         }
         if(size<5)
         {
+         
             for(int i = size; i < 5; i++) 
              my_best_five_passages.add(InvertedIndex.getFivePassages().get(i)); 
         }
@@ -160,6 +168,7 @@ public class Retrival {
                 
             }     
         }
+     //  System.out.println("docid: " +best_passage.get_doc_id() + "  pass id: " + best_passage.get_passage_id()+ "  "  + best_passage.passage);
        passages.remove(best_passage); 
     
    return best_passage; 
